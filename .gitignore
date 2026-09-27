@@ -1,0 +1,17 @@
+# Local Sites deployment output, configuration, and its separate Git history.
+/site/
+/.qa/
+
+# Private working notes and agent configuration.
+/AGENTS.md
+/PLAN.md
+/.agents/
+/.codex/
+
+# Local credentials and generated Python files.
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
