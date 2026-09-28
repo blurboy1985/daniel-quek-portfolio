@@ -8,9 +8,10 @@ A personal portfolio about data platforms, applied AI, automation and side proje
 
 - `index.html` — page content, inline styles and JavaScript; edit this file.
 - `assets/` — portrait and project images.
+- `assets/f4-reunion.mp4` — mobile-friendly 720p copy of the F4 reunion AI music video, with its poster image alongside it. The original editing export stays outside the repository.
 - `build_site.py` — creates the standalone page and copies images into `site/dist/`.
 
-The source HTML is a fragment. Run the build to add the full document wrapper, share metadata and favicon before hosting. The generated page loads three.js and fonts from external services.
+The source HTML is a fragment. Run the build to add the full document wrapper, share metadata and favicon before hosting. The build copies JPG and MP4 assets next to the page. The generated page loads three.js and fonts from external services. Video playback uses native controls, supports inline mobile playback, and starts only when requested.
 
 ## Build and preview
 

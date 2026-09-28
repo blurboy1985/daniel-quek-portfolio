@@ -43,6 +43,7 @@ if DIST.exists():
     shutil.rmtree(DIST)
 DIST.mkdir(parents=True)
 (DIST / "index.html").write_text(html, encoding="utf-8")
-for img in (ROOT / "assets").glob("*.jpg"):
-    shutil.copy2(img, DIST / img.name)
+for asset in (ROOT / "assets").iterdir():
+    if asset.is_file() and asset.suffix.lower() in {".jpg", ".mp4"}:
+        shutil.copy2(asset, DIST / asset.name)
 print("Built", DIST, sorted(p.name for p in DIST.iterdir()))
