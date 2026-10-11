@@ -24,7 +24,14 @@ python -m http.server 8000 --bind 127.0.0.1 --directory site/dist
 
 Open [localhost:8000](http://localhost:8000). Press Ctrl+C to stop the preview.
 
-Upload the contents of `site/dist/` to a static host. Keep its images alongside `index.html`. The live site is hosted on ChatGPT Sites; publishing there is managed separately from this repository. Local hosting configuration and generated output are excluded from Git.
+The live site is hosted on Cloudflare Pages in the `daniel-quek-portfolio` project, with `danielquek.com` as its custom domain. Build the site, then deploy the contents of `site/dist/` using Direct Upload. Keep its images and video alongside `index.html`. Generated output is excluded from Git.
+
+```sh
+python3 build_site.py
+npx wrangler pages deploy site/dist --project-name=daniel-quek-portfolio --branch=main
+```
+
+Deployments currently use Direct Upload; pushing to GitHub alone does not publish the site. The DOS Discovery Office project links to its existing interactive experience on ChatGPT Sites.
 
 ## Motion and accessibility
 

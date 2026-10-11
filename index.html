@@ -185,6 +185,8 @@ section.s.tight{padding-top:0}
 .build img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#E4E8E6}
 .shot{position:relative}
 .build img.inset{position:absolute;left:4%;bottom:4%;width:40%;aspect-ratio:3/2;border-radius:14px;border:3px solid var(--inset-line);box-shadow:0 10px 30px rgba(16,32,40,.28)}
+.build.featured{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}
+@media(max-width:820px){.build.featured{grid-template-columns:minmax(0,1fr)}}
 .build .body{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;flex:1}
 .build h3{margin:0;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1}
 .minis .build{border-radius:22px}
@@ -321,6 +323,20 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <h2 class="lead">Things I've built.</h2>
     <p class="sub">Side projects where I try out new tools, from 3D engines to LLMs.</p>
     <div class="builds">
+      <article class="build featured" id="dos-discovery-office">
+        <div class="shot">
+          <img src="dos-office.jpg" width="800" height="600" loading="lazy" alt="An overview of the DOS Discovery Office, with four galleries arranged around a central reception.">
+          <img class="inset" src="dos-gallery.jpg" width="810" height="540" loading="lazy" alt="A visitor avatar exploring the statistics gallery and meeting its virtual officer.">
+        </div>
+        <div class="body">
+          <span class="eyebrow">3D - WebGL - Interactive learning</span>
+          <h3>DOS Discovery Office</h3>
+          <p>A browser-based 3D visit to a conceptual Department of Statistics office. Create an avatar and explore four galleries covering statistics, digital services, standards, and surveys.</p>
+          <p>Walk through exhibits, try short activities, and follow links to official SingStat resources.</p>
+          <p class="note">A personal learning concept based on public resources, not an actual DOS floor plan.</p>
+          <div class="acts"><a href="https://dos-discovery-office.daniel-tianwen.chatgpt.site/">Explore the office <span aria-hidden="true">&nbsp;↗</span></a></div>
+        </div>
+      </article>
       <article class="build">
         <div class="body">
           <span class="eyebrow">Python - LLMs - In daily use</span>
