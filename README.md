@@ -31,7 +31,7 @@ python3 build_site.py
 npx wrangler pages deploy site/dist --project-name=daniel-quek-portfolio --branch=main
 ```
 
-Deployments currently use Direct Upload; pushing to GitHub alone does not publish the site. The DOS Discovery Office project links to its existing interactive experience on ChatGPT Sites.
+Deployments currently use Direct Upload; pushing to GitHub alone does not publish the site.
 
 ## Motion and accessibility
 

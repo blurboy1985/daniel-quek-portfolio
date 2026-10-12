@@ -185,8 +185,6 @@ section.s.tight{padding-top:0}
 .build img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#E4E8E6}
 .shot{position:relative}
 .build img.inset{position:absolute;left:4%;bottom:4%;width:40%;aspect-ratio:3/2;border-radius:14px;border:3px solid var(--inset-line);box-shadow:0 10px 30px rgba(16,32,40,.28)}
-.build.featured{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}
-@media(max-width:820px){.build.featured{grid-template-columns:minmax(0,1fr)}}
 .build .body{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;flex:1}
 .build h3{margin:0;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1}
 .minis .build{border-radius:22px}
@@ -241,11 +239,13 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <a class="brand" href="#top">Daniel Quek</a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#ask">Ask</a>
+      <a href="#journey" class="hide-sm">Journey</a>
       <a href="#builds">Builds</a>
       <button class="mode" id="mode" type="button" aria-pressed="false" aria-label="Dark mode">
         <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
       </button>
+      <a class="cta" href="https://www.linkedin.com/in/daniel-quek-34553813/">Connect</a>
     </nav>
   </div>
 </header>
@@ -258,7 +258,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <div class="labels" id="labels" aria-hidden="true"></div>
 
     <div class="panel p0" data-win="-1,0,0.07,0.14">
-      <span class="kicker"><i></i>Applied AI - Singapore</span>
+      <span class="kicker"><i></i>Applied AI · Singapore</span>
       <h1>Daniel Quek</h1>
       <p>I build with data, video, and small tools, mostly for the fun of it.</p>
       <div class="hero-actions"><a class="btn" href="#builds">Explore my projects</a></div>
@@ -275,9 +275,9 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
       <p>A second brain, a Rubik's cube solver, and Tableau vizzes I publish when an idea sticks.</p>
     </div>
     <div class="panel pn" data-win="0.76,0.81,0.99,1.2">
-      <span class="step">Play</span>
-      <h2>Made for fun.</h2>
-      <p>An F4 reunion video, Tableau vizzes, and a few small tools.</p>
+      <span class="step">Journey</span>
+      <h2>Banking came first.</h2>
+      <p>Banking and iPhone apps came first. These days I build on the side.</p>
     </div>
   </div>
 </section>
@@ -304,12 +304,26 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
   </div>
 </section>
 
+<section class="s tight" id="journey">
+  <div class="wrap">
+    <h2 class="lead">The route so far.</h2>
+    <ol class="journey">
+      <li><span class="yr">2013–2014</span><span class="role">AVP, Demand Management, Online Channels<span class="org">UOB</span></span></li>
+      <li><span class="yr">2012–2013</span><span class="role">Operation Analyst, Retail Services<span class="org">Standard Chartered Bank</span></span></li>
+      <li><span class="yr">2011–2012</span><span class="role">iOS Developer<span class="org">Cellcity and Gushcloud · apps for DBS, HSBC Insurance and Gong Cha</span></span></li>
+      <li><span class="yr">2009–2011</span><span class="role">Product Manager, Cards and Online Banking<span class="org">Standard Chartered Bank · introduced the Breeze and Good Life mobile apps</span></span></li>
+      <li><span class="yr">2006–2009</span><span class="role">Bachelor of Business, Banking and Finance, Second Upper Honours<span class="org">Nanyang Technological University</span></span></li>
+    </ol>
+  </div>
+</section>
+
 <section class="s tight" id="about">
   <div class="wrap about">
     <div class="portrait-frame"><img class="portrait-img" src="portrait.jpg" width="800" height="800" loading="lazy" alt="Daniel Quek grinning in a red Singapore jersey and parachute harness, with Marina Bay Sands and National Day fireworks behind him."></div>
     <div>
-      <h2 class="lead" style="margin-bottom:28px">Made on the side.</h2>
-      <p>Tableau vizzes, small tools, and AI video. I care most about making technical things plain.</p>
+      <h2 class="lead" style="margin-bottom:28px">Finance first. Then apps.</h2>
+      <p>I started in banking, then spent a year building iPhone apps.</p>
+      <p>What I share now is on the side: Tableau vizzes, small tools, and AI video. I care most about making technical things plain.</p>
       <div class="chips" style="margin-bottom:22px" aria-label="Credentials">
         <span class="chip">Tableau Data Scientist</span><span class="chip">Tableau Analyst</span><span class="chip">AI Singapore, Foundations in AI</span>
       </div>
@@ -323,27 +337,13 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <h2 class="lead">Things I've built.</h2>
     <p class="sub">Side projects where I try out new tools, from 3D engines to LLMs.</p>
     <div class="builds">
-      <article class="build featured" id="dos-discovery-office">
-        <div class="shot">
-          <img src="dos-office.jpg" width="800" height="600" loading="lazy" alt="An overview of the DOS Discovery Office, with four galleries arranged around a central reception.">
-          <img class="inset" src="dos-gallery.jpg" width="810" height="540" loading="lazy" alt="A visitor avatar exploring the statistics gallery and meeting its virtual officer.">
-        </div>
-        <div class="body">
-          <span class="eyebrow">3D - WebGL - Interactive learning</span>
-          <h3>DOS Discovery Office</h3>
-          <p>A browser-based 3D visit to a conceptual Department of Statistics office. Create an avatar and explore four galleries covering statistics, digital services, standards, and surveys.</p>
-          <p>Walk through exhibits, try short activities, and follow links to official SingStat resources.</p>
-          <p class="note">A personal learning concept based on public resources, not an actual DOS floor plan.</p>
-          <div class="acts"><a href="https://dos-discovery-office.daniel-tianwen.chatgpt.site/">Explore the office <span aria-hidden="true">&nbsp;↗</span></a></div>
-        </div>
-      </article>
       <article class="build">
         <div class="body">
-          <span class="eyebrow">Python - LLMs - In daily use</span>
+          <span class="eyebrow">Python · LLMs · In daily use</span>
           <h3>Second Brain</h3>
           <p>My personal knowledge base. The AI reads each new source once and files it into linked wiki pages, so what I learn adds up instead of being forgotten.</p>
           <ol class="flow" aria-label="How it works">
-            <li>raw/ sources</li><li class="arrow" aria-hidden="true">-></li><li>wiki/ pages</li><li class="arrow" aria-hidden="true">-></li><li>answers</li>
+            <li>raw/ sources</li><li class="arrow" aria-hidden="true">→</li><li>wiki/ pages</li><li class="arrow" aria-hidden="true">→</li><li>answers</li>
           </ol>
           <dl class="case-facts">
             <div><dt>What I built</dt><dd>Scheduled jobs that pull in a daily news digest and compile sources into linked wiki pages. I use the knowledge base daily.</dd></div>
@@ -356,7 +356,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <div class="minis">
       <article class="build">
         <div class="body">
-          <span class="eyebrow">Tableau - 2021</span>
+          <span class="eyebrow">Tableau · 2021</span>
           <h3>HDB Resale Flat Calculator</h3>
           <p>A team entry for the Data Arcade Tournament, featured in the Tableau gallery. More than 1,200 views on Tableau Public.</p>
           <div class="acts"><a href="https://public.tableau.com/app/profile/daniel.quek/viz/dat2021_cloud_peanut_friends_v4/Final">Open the viz</a></div>
@@ -364,7 +364,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
       </article>
       <article class="build">
         <div class="body">
-          <span class="eyebrow">three.js - Open source</span>
+          <span class="eyebrow">three.js · Open source</span>
           <h3>Rubik's Cube solver</h3>
           <p>An interactive 3D cube with a two-phase Kociemba solver, running entirely in the browser.</p>
           <div class="acts"><a href="https://github.com/blurboy1985/rubiks-cube-solver">See the code</a></div>
@@ -372,7 +372,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
       </article>
       <article class="build">
         <div class="body">
-          <span class="eyebrow">Python - React - Open source</span>
+          <span class="eyebrow">Python · React · Open source</span>
           <h3>Paper-trading simulator</h3>
           <p>A multi-signal US-stock simulator with a look-ahead-safe backtester and hard risk caps, for learning quant methods safely.</p>
           <div class="acts"><a href="https://github.com/blurboy1985/stock-trading">See the code</a></div>
@@ -387,12 +387,12 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <h2 class="lead">AI video works.</h2>
     <article class="video-work">
       <div>
-        <span class="eyebrow">AI-assisted video - Music</span>
+        <span class="eyebrow">AI-assisted video · Music</span>
         <h3>F4 reunion</h3>
         <p>My latest AI video work: an imagined F4 reunion music video.</p>
-        <p>2 min 50 sec - Vertical video</p>
+        <p>2 min 50 sec · Vertical video</p>
       </div>
-      <video controls playsinline preload="none" poster="f4-reunion-poster.jpg" width="720" height="1280" aria-label="F4 reunion - AI music video">
+      <video controls playsinline preload="none" poster="f4-reunion-poster.jpg" width="720" height="1280" aria-label="F4 reunion — AI music video">
         <source src="f4-reunion.mp4" type="video/mp4">
         <a href="f4-reunion.mp4">Watch the F4 reunion video</a>.
       </video>
@@ -411,7 +411,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
         <a href="https://public.tableau.com/app/profile/daniel.quek/vizzes">See the vizzes</a>
       </div>
       <div>
-        <div class="big-num">2x</div>
+        <div class="big-num">2×</div>
         <h3>Data Arcade Tournament</h3>
         <p>A visual analytics competition. Entries in 2020 and 2021.</p>
         <a href="https://www.tableau.com/tableau-x-data-arcade-tournament-2021">See the 2021 gallery</a>
@@ -454,6 +454,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
   <div class="wrap">
     <h2 class="lead">Let's compare notes.</h2>
     <p class="sub">Working on AI agents, Tableau, or side projects? I'd like to hear from you.</p>
+    <p style="margin-top:36px"><a class="btn" href="https://www.linkedin.com/in/daniel-quek-34553813/">Connect on LinkedIn</a></p>
     <div class="links">
       <a href="https://github.com/blurboy1985">GitHub</a>
       <a href="https://www.youtube.com/@dailywithdaniel">YouTube</a>
@@ -488,9 +489,9 @@ modeBtn.addEventListener("click", () => {
 const answers = {
   ai: ["Where do you use AI?", "On the F4 reunion video, in a second brain that files sources into a wiki, and through the AI Singapore Foundations in AI course."],
   auto: ["What do you automate?", "The second brain. A scheduled job pulls a daily digest, and other jobs compile those sources into linked wiki pages."],
-  path: ["How did you get into data?", "Side projects: vizzes, small tools, and video."],
+  path: ["How did you get into data?", "Banking first, then a year building iPhone apps. Side projects came after that: vizzes, small tools, and video."],
   fun: ["What do you build for fun?", "A second brain, a Rubik's cube solver, the F4 reunion video, and a YouTube channel about everyday life in Singapore."],
-  real: ["Can I talk to the real Daniel?", "Yes. The links at the bottom of the page are the best way to reach me."]
+  real: ["Can I talk to the real Daniel?", "Yes. I'd be glad to compare notes on applied AI, Tableau, or side projects."]
 };
 const log = document.getElementById("log"), promptBtns = [...document.querySelectorAll("#prompts button")];
 let busy = false;
@@ -503,6 +504,13 @@ promptBtns.forEach(btn => btn.addEventListener("click", () => {
   log.lastChild.textContent = q;
   const bubble = addMsg("a", '<span class="who">DQ agent</span><span class="dots" aria-label="Thinking"><span></span><span></span><span></span></span>');
   const finish = () => {
+    if (btn.dataset.q === "real") {
+      const link = document.createElement("a");
+      link.href = "https://www.linkedin.com/in/daniel-quek-34553813/";
+      link.textContent = "Connect with me on LinkedIn";
+      bubble.append(document.createElement("br"), link);
+      log.scrollTop = log.scrollHeight;
+    }
     busy = false; promptBtns.forEach(b => b.disabled = b.dataset.used === "1");
   };
   btn.dataset.used = "1";
@@ -522,9 +530,9 @@ promptBtns.forEach(btn => btn.addEventListener("click", () => {
 // ----- Journey, About and Builds: progressive scroll and pointer motion -----
 function initSectionMotion(){
   const preference = matchMedia("(prefers-reduced-motion: reduce)");
-  const sections = [...document.querySelectorAll("#about, #builds")];
+  const sections = [...document.querySelectorAll("#journey, #about, #builds")];
   const route = document.querySelector(".journey");
-  const milestones = route ? [...route.children] : [];
+  const milestones = [...route.children];
   const portrait = document.querySelector(".portrait-frame");
   const builds = [...document.querySelectorAll("#builds .build")];
   const flow = document.querySelector("#builds .flow");
@@ -536,11 +544,9 @@ function initSectionMotion(){
     pendingFrame = 0;
     if (preference.matches) return;
     const readingLine = innerHeight * .72;
-    if (route) {
-      const bounds = route.getBoundingClientRect();
-      route.style.setProperty("--route-progress", limit((readingLine - bounds.top - 32) / Math.max(1, bounds.height - 64)));
-      milestones.forEach(item => item.classList.toggle("is-reached", item.getBoundingClientRect().top + 32 < readingLine));
-    }
+    const bounds = route.getBoundingClientRect();
+    route.style.setProperty("--route-progress", limit((readingLine - bounds.top - 32) / Math.max(1, bounds.height - 64)));
+    milestones.forEach(item => item.classList.toggle("is-reached", item.getBoundingClientRect().top + 32 < readingLine));
     const aboutBounds = portrait.getBoundingClientRect();
     if (aboutBounds.bottom > 0 && aboutBounds.top < innerHeight){
       const progress = limit((innerHeight - aboutBounds.top) / (innerHeight + aboutBounds.height));
@@ -570,7 +576,7 @@ function initSectionMotion(){
     root.classList.toggle("motion-ready", !preference.matches);
     if (preference.matches){
       animations.forEach(animation => animation.cancel()); animations.clear();
-      if (route) route.style.removeProperty("--route-progress");
+      route.style.removeProperty("--route-progress");
       milestones.forEach(item => item.classList.add("is-reached"));
     } else schedule();
     syncFlow();
@@ -680,7 +686,7 @@ const heightF = (gx, gz) => clamp(.6 * gauss(gx, gz, 7, 8, 4.5) + .55 * gauss(gx
 const lineCols = ["#D42E12", "#009645", "#12A0A0", "#C07A35", "#6F7FE0", "#2E5BFF"].map(col);
 const pts = [new THREE.Vector3(-8, 0, 2.2), new THREE.Vector3(-5, 0, -1.4), new THREE.Vector3(-2, 0, 1.8), new THREE.Vector3(1, 0, -1.8), new THREE.Vector3(3.8, 0, 1.6), new THREE.Vector3(6, 0, -1.2), new THREE.Vector3(8.3, 0, 1.2)];
 const curve = new THREE.CatmullRomCurve3(pts, false, "catmullrom", .5);
-const stationNames = ["Second Brain", "Cube", "Vizzes", "Simulator", "F4", "Digest", "Wiki"];
+const stationNames = ["NTU", "Standard Chartered", "iOS apps", "UOB", "Second Brain", "Vizzes", "F4"];
 const stationT = pts.map((p, i) => i / (pts.length - 1));
 
 // neural-net geometry: four layers of nodes, each a sunflower disc
