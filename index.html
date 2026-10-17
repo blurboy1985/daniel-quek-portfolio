@@ -132,9 +132,8 @@ section.s.tight{padding-top:0}
 /* About */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,80px);align-items:center}
 @media (max-width:820px){.about{grid-template-columns:1fr}}
-.portrait-img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:52% 50%;border-radius:30px;background:var(--tile)}
+.portrait-img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:30px;background:var(--tile)}
 .portrait-frame{overflow:hidden;border-radius:30px;perspective:1000px}
-.motion-ready .portrait-img{transform:translateY(var(--portrait-shift,0px)) scale(1.06);border-radius:0}
 .about p{font-size:clamp(18px,1.8vw,21px);line-height:1.6;margin:0 0 18px;max-width:52ch}
 .about .name{font-size:15px;color:var(--muted);margin-bottom:22px}
 
@@ -217,7 +216,7 @@ section.s.tight{padding-top:0}
 .links a:hover{text-decoration:underline}
 footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:center;padding:28px 20px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){.cue svg,.kicker i,.art .wire{animation:none}}
-@media (prefers-reduced-motion: reduce){.flow li,.motion-ready #builds .build{transition:none}.motion-ready .portrait-img,.motion-ready #builds .build,.motion-ready .build img.inset{transform:none}}
+@media (prefers-reduced-motion: reduce){.flow li,.motion-ready #builds .build{transition:none}.motion-ready #builds .build,.motion-ready .build img.inset{transform:none}}
 </style>
 
 <header class="nav">
@@ -269,7 +268,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
 
 <section class="s tight" id="about">
   <div class="wrap about">
-    <div class="portrait-frame"><img class="portrait-img" src="daniel-quek-portrait.jpg" width="800" height="800" loading="lazy" alt="Daniel Quek grinning in a red Singapore jersey and parachute harness, with Marina Bay Sands and National Day fireworks behind him."></div>
+    <div class="portrait-frame"><img class="portrait-img" src="daniel-quek-portrait.jpg" width="1100" height="1100" loading="lazy" alt="Daniel Quek, with curly shoulder-length hair and a clip-on mic, talking with his hands against a pale blue background. He is wearing a green camo T-shirt with a deer and the words Whitetail Legend."></div>
     <div>
       <h2 class="lead" style="margin-bottom:28px">Finance first. Now AI.</h2>
       <p>I started in banking, built iPhone apps, and now build with AI every day.</p>
@@ -475,7 +474,6 @@ modeBtn.addEventListener("click", () => {
 function initSectionMotion(){
   const preference = matchMedia("(prefers-reduced-motion: reduce)");
   const sections = [...document.querySelectorAll("#about, #builds")];
-  const portrait = document.querySelector(".portrait-frame");
   const builds = [...document.querySelectorAll("#builds .build")];
   const flow = document.querySelector("#builds .flow");
   const flowSteps = [...flow.querySelectorAll("li:not(.arrow)")];
@@ -485,11 +483,6 @@ function initSectionMotion(){
   function update(){
     pendingFrame = 0;
     if (preference.matches) return;
-    const aboutBounds = portrait.getBoundingClientRect();
-    if (aboutBounds.bottom > 0 && aboutBounds.top < innerHeight){
-      const progress = limit((innerHeight - aboutBounds.top) / (innerHeight + aboutBounds.height));
-      portrait.style.setProperty("--portrait-shift", `${(progress - .5) * 24}px`);
-    }
     const shot = document.querySelector("#builds .shot");
     if (shot) {
       const shotBounds = shot.getBoundingClientRect();
