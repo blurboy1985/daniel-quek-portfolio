@@ -2,7 +2,7 @@
 
 Live at **[danielquek.com](https://danielquek.com)**.
 
-A personal portfolio about data platforms, applied AI, automation and side projects. The site uses a three.js opening, JavaScript scroll animations, a light theme with a dark-mode toggle, and a clearly labelled scripted chat. Views expressed are personal.
+A personal portfolio about data platforms, applied AI, automation and side projects. The site uses a three.js opening, JavaScript scroll animations and a light theme with a dark-mode toggle, plus a video section with the F4 reunion video and Ren & Hana YouTube Shorts. Views expressed are personal.
 
 ## Source
 
@@ -36,4 +36,4 @@ Deployments currently use Direct Upload; pushing to GitHub alone does not publis
 
 ## Motion and accessibility
 
-About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The chat uses pre-written answers and does not call an AI service.
+About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The Shorts cards are plain links with lazy-loaded YouTube thumbnails (no embedded players); "See all on YouTube" opens the ASMR Food playlist, so new uploads show there without code changes.
