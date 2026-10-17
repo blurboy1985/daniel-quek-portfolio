@@ -36,4 +36,4 @@ Deployments currently use Direct Upload; pushing to GitHub alone does not publis
 
 ## Motion and accessibility
 
-Journey includes a scroll-progress timeline, About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The chat uses pre-written answers and does not call an AI service.
+About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The chat uses pre-written answers and does not call an AI service.

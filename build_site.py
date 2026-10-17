@@ -24,7 +24,7 @@ meta = f"""<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Daniel Quek">
-<meta property="og:description" content="Applied AI and automation on Singapore's public data.">
+<meta property="og:description" content="Fun side projects by Daniel Quek: games, apps and AI videos.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="{favicon}">
 """
