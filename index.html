@@ -316,11 +316,11 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <div class="builds">
       <article class="build game-feature" id="playsimi" aria-labelledby="playsimi-title">
         <figure class="game-media">
-          <video controls playsinline preload="none" poster="playsimi-poster.jpg" width="1280" height="720" aria-label="Play Simi promo — 30 seconds">
-            <source src="playsimi-promo.mp4" type="video/mp4">
-            <a href="playsimi-promo.mp4">Watch the Play Simi promo</a>.
+          <video id="playsimi-video" controls muted loop playsinline preload="metadata" poster="playsimi-poster-60.jpg" width="1280" height="720" aria-label="Play Simi story — 1 minute, starts muted">
+            <source src="playsimi-promo-60.mp4" type="video/mp4">
+            <a href="playsimi-promo-60.mp4">Watch the Play Simi story</a>.
           </video>
-          <figcaption>Watch the 30-second promo, filmed in the game</figcaption>
+          <figcaption>The 1-minute story behind the game. Tap the speaker for sound.</figcaption>
         </figure>
         <div class="body">
           <span class="eyebrow">Online game</span>
@@ -503,6 +503,22 @@ modeBtn.addEventListener("click", () => {
   syncModeBtn();
   window.dispatchEvent(new Event("dq-mode"));
 });
+
+// ----- Play Simi video: plays muted while on screen -----
+(() => {
+  const video = document.getElementById("playsimi-video");
+  if (!video || !("IntersectionObserver" in window)) return;
+  const still = matchMedia("(prefers-reduced-motion: reduce)");
+  let userPaused = false;
+  video.muted = true;
+  video.addEventListener("pause", () => { if (!video.dataset.autoPause) userPaused = true; delete video.dataset.autoPause; });
+  video.addEventListener("play", () => { userPaused = false; });
+  new IntersectionObserver(entries => {
+    const onScreen = entries[0].isIntersecting;
+    if (onScreen && !userPaused && !still.matches && video.paused) video.play().catch(() => {});
+    else if (!onScreen && !video.paused){ video.dataset.autoPause = "1"; video.pause(); }
+  }, {threshold:.5}).observe(video);
+})();
 
 // ----- Ask my agent (scripted) -----
 const answers = {
