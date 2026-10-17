@@ -193,7 +193,16 @@ section.s.tight{padding-top:0}
 .shorts img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:var(--tile);margin-bottom:10px;transition:transform .25s}
 .shorts a:hover img{transform:translateY(-4px)}
 .shorts a:hover span{text-decoration:underline}
-.channel-link{margin:20px 0 0}
+.channel-link{margin:clamp(32px,5vw,48px) 0 0}
+.live-block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:clamp(56px,8vw,96px)}
+.live-block h3{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:12px 0}
+.live-block p{margin:0 0 10px;color:var(--muted);max-width:42ch}
+.live-block .live-meta{font-size:15px}
+.live-thumb{display:block;border-radius:18px;overflow:hidden;background:var(--tile);border:1px solid var(--line)}
+.live-thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .25s}
+.live-thumb:hover img{transform:scale(1.02)}
+@media(max-width:640px){.live-block{grid-template-columns:minmax(0,1fr)}.live-thumb{order:-1}}
+@media (prefers-reduced-motion: reduce){.live-thumb img{transition:none}.live-thumb:hover img{transform:none}}
 @media(max-width:640px){.shorts{grid-template-columns:repeat(2,minmax(0,1fr))}.shorts a{font-size:15px}}
 @media (prefers-reduced-motion: reduce){.shorts img{transition:none}.shorts a:hover img{transform:none}}
 
@@ -395,8 +404,18 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
         <li><a href="https://www.youtube.com/shorts/O2ggHjlMVno"><img src="https://i.ytimg.com/vi/O2ggHjlMVno/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/O2ggHjlMVno/hqdefault.jpg'"><span>Matcha tiramisu balls</span></a></li>
         <li><a href="https://www.youtube.com/shorts/ux7D4TKz2Rk"><img src="https://i.ytimg.com/vi/ux7D4TKz2Rk/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ux7D4TKz2Rk/hqdefault.jpg'"><span>Dubai pistachio chocolate bar</span></a></li>
       </ul>
-      <p class="channel-link"><a href="https://www.youtube.com/@dailywithdaniel">More on my YouTube channel <span aria-hidden="true">↗</span></a></p>
     </div>
+    <article class="live-block">
+      <div>
+        <span class="eyebrow">Codex Live</span>
+        <h3>Codex DevDay Exchange, Singapore</h3>
+        <p>A recorded Codex community meetup in Singapore: a recap of OpenAI's DevDay, then demos from local builders.</p>
+        <p class="live-meta">Livestream · 10 Oct 2026 · 1 hr 3 min</p>
+        <a class="see-all" href="https://www.youtube.com/watch?v=OF8mtbYZsNo">Watch on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="live-thumb" href="https://www.youtube.com/watch?v=OF8mtbYZsNo" aria-label="Watch Codex DevDay Exchange, Singapore on YouTube"><img src="https://i.ytimg.com/vi/OF8mtbYZsNo/maxresdefault.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OF8mtbYZsNo/hqdefault.jpg'"></a>
+    </article>
+    <p class="channel-link"><a href="https://www.youtube.com/@dailywithdaniel">More on my YouTube channel <span aria-hidden="true">↗</span></a></p>
   </div>
 </section>
 
