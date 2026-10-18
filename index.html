@@ -138,16 +138,13 @@ section.s.tight{padding-top:0}
 
 /* Builds */
 .builds{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:56px}
-.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
-@media (max-width:820px){.builds,.minis{grid-template-columns:1fr}}
+@media (max-width:820px){.builds{grid-template-columns:1fr}}
 .build{background:var(--tile);border-radius:30px;overflow:hidden;display:flex;flex-direction:column}
 .build img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#E4E8E6}
 .shot{position:relative}
 .build img.inset{position:absolute;left:4%;bottom:4%;width:40%;aspect-ratio:3/2;border-radius:14px;border:3px solid var(--inset-line);box-shadow:0 10px 30px rgba(16,32,40,.28)}
 .build .body{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;flex:1}
 .build h3{margin:0;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1}
-.minis .build{border-radius:22px}
-.minis .build h3{font-size:22px}
 .build p{margin:0;color:var(--muted);max-width:52ch}
 .game-feature{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center}
 .game-media{margin:clamp(16px,2.4vw,30px);min-width:0}
@@ -359,32 +356,6 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
             <div><dt>How I check it</dt><dd>I test it with questions to make sure it finds the right note, and says so when it doesn't know.</dd></div>
           </dl>
           <p class="note">Based on an idea from Andrej Karpathy. The code is private.</p>
-        </div>
-      </article>
-    </div>
-    <div class="minis">
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Interactive chart · 2021</span>
-          <h3>HDB Resale Flat Calculator</h3>
-          <p>A team contest entry, featured in Tableau's gallery. Viewed more than 1,200 times.</p>
-          <div class="acts"><a href="https://public.tableau.com/app/profile/daniel.quek/viz/dat2021_cloud_peanut_friends_v4/Final">Try it</a></div>
-        </div>
-      </article>
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Puzzle · Open source</span>
-          <h3>Rubik's Cube solver</h3>
-          <p>A 3D Rubik's Cube you can turn in your browser. It can solve itself, too.</p>
-          <div class="acts"><a href="https://github.com/blurboy1985/rubiks-cube-solver">See the code</a></div>
-        </div>
-      </article>
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Practice investing · Open source</span>
-          <h3>Stock-trading simulator</h3>
-          <p>Practise trading US stocks with pretend money, to learn and test ideas without risk.</p>
-          <div class="acts"><a href="https://github.com/blurboy1985/stock-trading">See the code</a></div>
         </div>
       </article>
     </div>
