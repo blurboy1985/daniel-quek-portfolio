@@ -286,7 +286,7 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <div class="builds">
       <article class="build game-feature" id="playsimi" aria-labelledby="playsimi-title">
         <figure class="game-media">
-          <video id="playsimi-video" controls muted loop playsinline preload="metadata" poster="playsimi-poster-60.jpg" width="1280" height="720" aria-label="Play Simi story — 1 minute, starts muted">
+          <video id="playsimi-video" data-autoplay-in-view controls muted loop playsinline preload="metadata" poster="playsimi-poster-60.jpg" width="1280" height="720" aria-label="Play Simi story — 1 minute, starts muted">
             <source src="playsimi-promo-60.mp4" type="video/mp4">
             <a href="playsimi-promo-60.mp4">Watch the Play Simi story</a>.
           </video>
@@ -324,6 +324,26 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
           </ul>
           <div class="acts"><a class="btn" href="https://eatsimi.danielquek.com">Try Eat Simi <span aria-hidden="true">↗</span></a></div>
           <p class="note">Try the website now · iPhone app coming soon</p>
+        </div>
+      </article>
+      <article class="build game-feature" id="hazegowhere" aria-labelledby="hazegowhere-title">
+        <figure class="game-media">
+          <video data-autoplay-in-view controls muted loop playsinline preload="metadata" poster="haze-gowhere-poster.jpg" width="1280" height="720" aria-label="Haze GoWhere demo — 44 seconds, starts muted">
+            <source src="haze-gowhere-demo.mp4" type="video/mp4">
+            <a href="haze-gowhere-demo.mp4">Watch the Haze GoWhere demo</a>.
+          </video>
+          <figcaption>The 44-second demo. Tap the speaker for sound.</figcaption>
+        </figure>
+        <div class="body">
+          <span class="eyebrow">Haze helper · Website</span>
+          <h3 id="hazegowhere-title">Haze GoWhere</h3>
+          <p>Tell it where you're going in Singapore, and it finds the route that keeps you indoors the longest, using trains, underground stations and covered walkways, based on live NEA haze readings.</p>
+          <ul class="game-highlights">
+            <li>Shows which parts of the trip are indoors, sheltered or out in the open.</li>
+            <li>The worse the haze, the harder it avoids walking outside.</li>
+            <li>When the haze is really bad, it also suggests a taxi.</li>
+          </ul>
+          <div class="acts"><a class="btn" href="https://haze.danielquek.com">Try Haze GoWhere <span aria-hidden="true">↗</span></a><a href="https://x.com/daniu_101/status/2111642867915444388">See it on X <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
       <article class="build">
@@ -452,10 +472,9 @@ modeBtn.addEventListener("click", () => {
   window.dispatchEvent(new Event("dq-mode"));
 });
 
-// ----- Play Simi video: plays muted while on screen -----
-(() => {
-  const video = document.getElementById("playsimi-video");
-  if (!video || !("IntersectionObserver" in window)) return;
+// ----- Feature videos: play muted while on screen -----
+document.querySelectorAll("video[data-autoplay-in-view]").forEach(video => {
+  if (!("IntersectionObserver" in window)) return;
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   let userPaused = false;
   video.muted = true;
@@ -466,7 +485,7 @@ modeBtn.addEventListener("click", () => {
     if (onScreen && !userPaused && !still.matches && video.paused) video.play().catch(() => {});
     else if (!onScreen && !video.paused){ video.dataset.autoPause = "1"; video.pause(); }
   }, {threshold:.5}).observe(video);
-})();
+});
 
 // ----- About and Builds: progressive scroll and pointer motion -----
 function initSectionMotion(){
