@@ -389,6 +389,22 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
           <p class="note">The website suggests dishes from any menu · iOS app coming soon</p>
         </div>
       </article>
+      <article class="build" id="decision-trails" aria-labelledby="decision-trails-title">
+        <div class="body">
+          <span class="eyebrow">Applied AI · TypeSafe Jev · Cloudflare</span>
+          <h3 id="decision-trails-title">SSIC &amp; SSOC Decision Trails</h3>
+          <p>Two sister apps that code text to Singapore's national classifications. Describe a business and get its SSIC 2025 industry code, or paste a job description and get its SSOC 2024 occupation code. Every step of the decision plays out as a pixel-art crowd, with each probability listed.</p>
+          <ol class="flow" aria-label="How it works">
+            <li>text</li><li class="arrow" aria-hidden="true">→</li><li>5 levels</li><li class="arrow" aria-hidden="true">→</li><li>finals</li><li class="arrow" aria-hidden="true">→</li><li>5-digit code</li>
+          </ol>
+          <dl class="case-facts">
+            <div><dt>How it decides</dt><dd>A beam search walks the SingStat tree one level at a time, using SingStat's own definitions and exclusions. The five best codes then meet in a final round. Six model calls, about 1.4 seconds.</dd></div>
+            <div><dt>How I check it</dt><dd>I test against the codes employers chose on MyCareersFuture. SSIC matched 10 of 12 companies. SSOC matched 4 of 10 job postings, and most of the misses were ambiguous postings, not clear errors.</dd></div>
+          </dl>
+          <div class="acts"><a class="btn" href="https://ssic.danielquek.com">Try SSIC <span aria-hidden="true">↗</span></a> <a class="btn" href="https://ssoc.danielquek.com">Try SSOC <span aria-hidden="true">↗</span></a></div>
+          <p class="note">Open source: <a href="https://github.com/blurboy1985/ssic-decision-trail">SSIC code</a> · <a href="https://github.com/blurboy1985/ssoc-decision-trail">SSOC code</a></p>
+        </div>
+      </article>
       <article class="build">
         <div class="body">
           <span class="eyebrow">Python · LLMs · In daily use</span>
@@ -542,7 +558,7 @@ const answers = {
   ai: ["Where do you use AI?", "On the F4 reunion video, in a second brain that files sources into a wiki, and through the AI Singapore Foundations in AI course."],
   auto: ["What do you automate?", "The second brain. A scheduled job pulls a daily digest, and other jobs compile those sources into linked wiki pages."],
   path: ["How did you get into data?", "Banking first, then a year building iPhone apps. Side projects came after that: vizzes, small tools, and video."],
-  fun: ["What do you build for fun?", "A second brain, a Rubik's cube solver, the F4 reunion video, and a YouTube channel about everyday life in Singapore."],
+  fun: ["What do you build for fun?", "A second brain, AI apps that assign SSIC and SSOC codes, a Rubik's cube solver, the F4 reunion video, and a YouTube channel about everyday life in Singapore."],
   real: ["Can I talk to the real Daniel?", "Yes. I'd be glad to compare notes on applied AI, Tableau, or side projects."]
 };
 const log = document.getElementById("log"), promptBtns = [...document.querySelectorAll("#prompts button")];
