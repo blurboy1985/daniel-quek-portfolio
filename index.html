@@ -378,6 +378,22 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
           <p class="note">Based on an idea from Andrej Karpathy. The code is private.</p>
         </div>
       </article>
+      <article class="build" id="decision-trails" aria-labelledby="decision-trails-title">
+        <div class="body">
+          <span class="eyebrow">AI for statistics · Websites</span>
+          <h3 id="decision-trails-title">SSIC &amp; SSOC Decision Trails</h3>
+          <p>Two sister apps that find Singapore's official codes for you. Describe a business to get its SSIC industry code, or paste a job ad to get its SSOC occupation code. You watch the AI choose, step by step, as a pixel-art crowd.</p>
+          <ol class="flow" aria-label="How it works">
+            <li>Your text</li><li class="arrow" aria-hidden="true">→</li><li>Five rounds</li><li class="arrow" aria-hidden="true">→</li><li>Final five</li><li class="arrow" aria-hidden="true">→</li><li>Code</li>
+          </ol>
+          <dl class="case-facts">
+            <div><dt>How it decides</dt><dd>It narrows the official list one level at a time using SingStat's own definitions, then picks from the best five. It shows how sure it is at every step.</dd></div>
+            <div><dt>How I check it</dt><dd>I compare its answers with the codes on real MyCareersFuture listings. Industry codes matched 10 of 12 companies. Job codes matched 4 of 10 ads, and most misses were ads that could fit more than one code.</dd></div>
+          </dl>
+          <div class="acts"><a class="btn" href="https://ssic.danielquek.com">Try SSIC <span aria-hidden="true">↗</span></a><a class="btn" href="https://ssoc.danielquek.com">Try SSOC <span aria-hidden="true">↗</span></a></div>
+          <p class="note">Open source: <a href="https://github.com/blurboy1985/ssic-decision-trail">SSIC code</a> · <a href="https://github.com/blurboy1985/ssoc-decision-trail">SSOC code</a></p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
