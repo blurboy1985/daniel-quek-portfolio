@@ -1,5 +1,5 @@
 <title>Daniel Quek</title>
-<meta name="description" content="Daniel Quek. Side projects in data, AI video, and small tools. Singapore.">
+<meta name="description" content="Fun side projects by Daniel Quek in Singapore: a game, a menu helper, AI videos and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -120,30 +120,6 @@ section.s.tight{padding-top:0}
 .art .wire{stroke:var(--accent);stroke-width:2;fill:none;stroke-dasharray:4 6;animation:flow 1.4s linear infinite}
 @keyframes flow{to{stroke-dashoffset:-20}}
 
-/* Ask my agent */
-.agent{margin-top:48px;background:var(--tile);border-radius:30px;padding:clamp(18px,3vw,32px);display:grid;gap:18px}
-.agent-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
-.agent-head b{color:var(--ink);font-weight:600;display:inline-flex;align-items:center;gap:8px}
-.agent-head b i{width:8px;height:8px;border-radius:50%;background:#1FAA59}
-.log{display:flex;flex-direction:column;gap:12px;height:340px;overflow-y:auto;padding:4px;overscroll-behavior:contain}
-.msg{max-width:min(640px,88%);padding:12px 16px;border-radius:18px;line-height:1.55;font-size:16px}
-.msg.q{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:6px}
-.msg.a{align-self:flex-start;background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:6px}
-.msg.a .who{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-.caret{display:inline-block;width:8px;height:1.1em;margin-left:2px;vertical-align:-2px;background:var(--accent);animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.dots{display:inline-flex;gap:4px;padding:6px 0}
-.dots span{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:dot 1s ease-in-out infinite}
-.dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
-@keyframes dot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
-.prompts{display:flex;flex-wrap:wrap;gap:8px}
-.prompts button{font:inherit;font-size:15px;font-weight:600;min-height:44px;max-width:100%;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-.prompts button:hover:not([disabled]){border-color:var(--accent);color:var(--accent)}
-.prompts button[disabled]{opacity:.45;cursor:default}
-.agent-note{margin:0;font-size:14px;color:var(--muted)}
-.msg.a a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;margin-top:8px}
-@media(max-width:640px){.log{height:auto;overflow:visible}.msg{max-width:100%}}
-
 /* Concrete examples, using established project facts. */
 .work-example{margin-top:32px;padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-radius:22px}
 .work-example h3{font-size:clamp(24px,3vw,32px);margin:8px 0 12px;letter-spacing:-.02em}
@@ -152,43 +128,23 @@ section.s.tight{padding-top:0}
 .case-facts dt{font-size:14px;font-weight:600;color:var(--ink)}
 .case-facts dd{margin:4px 0 0;color:var(--muted)}
 
-/* Journey */
-.journey{list-style:none;margin:56px 0 0;padding:0;border-top:1px solid var(--line)}
-.journey li{display:grid;grid-template-columns:minmax(90px,150px) minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.journey .yr{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
-.journey .role{font-size:clamp(19px,2vw,24px);font-weight:600;letter-spacing:-.015em}
-.journey .org{color:var(--muted);display:block;font-size:16px;font-weight:400;letter-spacing:0}
-.journey li.now .yr{color:var(--accent)}
-.journey{position:relative;padding-left:30px;border-top:0}
-.journey::before,.journey::after{content:"";position:absolute;left:6px;top:32px;bottom:32px;width:2px;border-radius:2px;background:var(--line);pointer-events:none}
-.journey::after{background:var(--accent);transform:scaleY(var(--route-progress,1));transform-origin:top}
-.journey li{position:relative}
-.journey li::before{content:"";position:absolute;left:-29px;top:31px;width:12px;height:12px;border:2px solid var(--line);border-radius:50%;background:var(--bg);z-index:1;transition:background .3s,border-color .3s,box-shadow .3s}
-.journey li.is-reached::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px var(--tile)}
-.journey li.is-reached .yr{color:var(--accent)}
-@media(max-width:520px){.journey li{grid-template-columns:1fr;gap:6px}.journey{padding-left:26px}.journey li::before{left:-25px}}
 
 /* About */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,80px);align-items:center}
 @media (max-width:820px){.about{grid-template-columns:1fr}}
-.portrait-img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:56% 50%;border-radius:30px;background:var(--tile)}
+.portrait-img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:30px;background:var(--tile)}
 .portrait-frame{overflow:hidden;border-radius:30px;perspective:1000px}
-.motion-ready .portrait-img{transform:translateY(var(--portrait-shift,0px)) scale(1.06);border-radius:0}
 .about p{font-size:clamp(18px,1.8vw,21px);line-height:1.6;margin:0 0 18px;max-width:52ch}
-.about .name{font-size:15px;color:var(--muted);margin-bottom:22px}
 
 /* Builds */
 .builds{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:56px}
-.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
-@media (max-width:820px){.builds,.minis{grid-template-columns:1fr}}
+@media (max-width:820px){.builds{grid-template-columns:1fr}}
 .build{background:var(--tile);border-radius:30px;overflow:hidden;display:flex;flex-direction:column}
 .build img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#E4E8E6}
 .shot{position:relative}
 .build img.inset{position:absolute;left:4%;bottom:4%;width:40%;aspect-ratio:3/2;border-radius:14px;border:3px solid var(--inset-line);box-shadow:0 10px 30px rgba(16,32,40,.28)}
 .build .body{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:12px;flex:1}
 .build h3{margin:0;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;line-height:1.1}
-.minis .build{border-radius:22px}
-.minis .build h3{font-size:22px}
 .build p{margin:0;color:var(--muted);max-width:52ch}
 .game-feature{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center}
 .game-media{margin:clamp(16px,2.4vw,30px);min-width:0}
@@ -220,13 +176,30 @@ section.s.tight{padding-top:0}
 .video-work h3{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:12px 0}
 .video-work p{color:var(--muted);max-width:42ch}
 @media(max-width:640px){.video-work{grid-template-columns:minmax(0,1fr)}.video-work video{max-width:340px}}
-.beyond{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:48px}
-@media (max-width:820px){.beyond{grid-template-columns:1fr}}
-.beyond h3{margin:14px 0 6px;font-size:22px;letter-spacing:-.015em}
-.beyond p{margin:0;color:var(--muted)}
-.beyond a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none}
-.beyond a:hover{text-decoration:underline}
-.big-num{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+
+.shorts-block{margin-top:clamp(56px,8vw,96px)}
+.shorts-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 32px;flex-wrap:wrap}
+.shorts-head h3{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:12px 0}
+.shorts-head p{margin:0;color:var(--muted);max-width:42ch}
+.see-all,.channel-link a{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;text-decoration:none}
+.see-all:hover,.channel-link a:hover{text-decoration:underline}
+.shorts{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,24px)}
+.shorts a{display:block;color:var(--ink);text-decoration:none;font-weight:600;font-size:16px;line-height:1.3}
+.shorts img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:var(--tile);margin-bottom:10px;transition:transform .25s}
+.shorts a:hover img{transform:translateY(-4px)}
+.shorts a:hover span{text-decoration:underline}
+.channel-link{margin:clamp(32px,5vw,48px) 0 0}
+.live-block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:clamp(56px,8vw,96px)}
+.live-block h3{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:12px 0}
+.live-block p{margin:0 0 10px;color:var(--muted);max-width:42ch}
+.live-block .live-meta{font-size:15px}
+.live-thumb{display:block;border-radius:18px;overflow:hidden;background:var(--tile);border:1px solid var(--line)}
+.live-thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .25s}
+.live-thumb:hover img{transform:scale(1.02)}
+@media(max-width:640px){.live-block{grid-template-columns:minmax(0,1fr)}.live-thumb{order:-1}}
+@media (prefers-reduced-motion: reduce){.live-thumb img{transition:none}.live-thumb:hover img{transform:none}}
+@media(max-width:640px){.shorts{grid-template-columns:repeat(2,minmax(0,1fr))}.shorts a{font-size:15px}}
+@media (prefers-reduced-motion: reduce){.shorts img{transition:none}.shorts a:hover img{transform:none}}
 
 /* Contact */
 .contact{background:var(--tile);text-align:center}
@@ -238,17 +211,16 @@ section.s.tight{padding-top:0}
 .links a{min-height:44px;display:inline-flex;align-items:center;text-decoration:none;font-weight:500}
 .links a:hover{text-decoration:underline}
 footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:center;padding:28px 20px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
-@media (prefers-reduced-motion: reduce){.cue svg,.kicker i,.art .wire,.caret,.dots span{animation:none}}
-@media (prefers-reduced-motion: reduce){.journey li::before,.flow li,.motion-ready #builds .build{transition:none}.motion-ready .portrait-img,.motion-ready #builds .build,.motion-ready .build img.inset{transform:none}}
+@media (prefers-reduced-motion: reduce){.cue svg,.kicker i,.art .wire{animation:none}}
+@media (prefers-reduced-motion: reduce){.flow li,.motion-ready #builds .build{transition:none}.motion-ready #builds .build,.motion-ready .build img.inset{transform:none}}
 </style>
 
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="#top">Daniel Quek</a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#ask">Ask</a>
-      <a href="#journey" class="hide-sm">Journey</a>
       <a href="#builds">Builds</a>
+      <a href="#ai-video">Videos</a>
       <button class="mode" id="mode" type="button" aria-pressed="false" aria-label="Dark mode">
         <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
@@ -266,76 +238,40 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
     <div class="labels" id="labels" aria-hidden="true"></div>
 
     <div class="panel p0" data-win="-1,0,0.07,0.14">
-      <span class="kicker"><i></i>Applied AI · Singapore</span>
+      <span class="kicker"><i></i>Side projects · Singapore</span>
       <h1>Daniel Quek</h1>
-      <p>I build with data, video, and small tools, mostly for the fun of it.</p>
+      <p>I make games, apps and videos for fun.</p>
       <div class="hero-actions"><a class="btn" href="#builds">Explore my projects</a></div>
       <div class="cue"><span>Scroll</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div>
     </div>
     <div class="panel pn" data-win="0.19,0.25,0.40,0.45">
-      <span class="step">Model</span>
-      <h2>Numbers and models.</h2>
-      <p>I like both ends of a question: the figures, and the models that read them.</p>
+      <span class="step">Data</span>
+      <h2>I like numbers.</h2>
+      <p>And helping people, and AI, make sense of them.</p>
     </div>
     <div class="panel pn" data-win="0.49,0.55,0.66,0.71">
       <span class="step">Builds</span>
       <h2>Small tools, on the side.</h2>
-      <p>A second brain, a Rubik's cube solver, and Tableau vizzes I publish when an idea sticks.</p>
+      <p>A digital notebook and charts I share online.</p>
     </div>
     <div class="panel pn" data-win="0.76,0.81,0.99,1.2">
-      <span class="step">Journey</span>
+      <span class="step">My story</span>
       <h2>Banking came first.</h2>
-      <p>Banking and iPhone apps came first. These days I build on the side.</p>
+      <p>Then iPhone apps. Now I make things for fun.</p>
     </div>
-  </div>
-</section>
-
-<section class="s tight" id="ask">
-  <div class="wrap">
-    <h2 class="lead">Ask my agent.</h2>
-    <p class="sub">A quick way to get to know me, in the style of an AI chat. Pick a question.</p>
-    <div class="agent">
-      <div class="agent-head"><b><i></i>DQ agent</b><span>Scripted demo</span></div>
-      <div class="log" id="log" role="log" aria-live="polite">
-        <div class="msg q">What are you building?</div>
-        <div class="msg a"><span class="who">DQ agent</span>Side projects. A second brain that files what I read into a wiki, Tableau vizzes, and short AI video.</div>
-      </div>
-      <div class="prompts" id="prompts">
-        <button type="button" id="q-ai" data-q="ai">Where do you use AI?</button>
-        <button type="button" id="q-auto" data-q="auto">What do you automate?</button>
-        <button type="button" id="q-path" data-q="path">How did you get into data?</button>
-        <button type="button" id="q-fun" data-q="fun">What do you build for fun?</button>
-        <button type="button" id="q-real" data-q="real">Can I talk to the real Daniel?</button>
-      </div>
-      <p class="agent-note">Every answer is pre-written. Nothing here is generated live.</p>
-    </div>
-  </div>
-</section>
-
-<section class="s tight" id="journey">
-  <div class="wrap">
-    <h2 class="lead">The route so far.</h2>
-    <ol class="journey">
-      <li><span class="yr">2013–2014</span><span class="role">AVP, Demand Management, Online Channels<span class="org">UOB</span></span></li>
-      <li><span class="yr">2012–2013</span><span class="role">Operation Analyst, Retail Services<span class="org">Standard Chartered Bank</span></span></li>
-      <li><span class="yr">2011–2012</span><span class="role">iOS Developer<span class="org">Cellcity and Gushcloud · apps for DBS, HSBC Insurance and Gong Cha</span></span></li>
-      <li><span class="yr">2009–2011</span><span class="role">Product Manager, Cards and Online Banking<span class="org">Standard Chartered Bank · introduced the Breeze and Good Life mobile apps</span></span></li>
-      <li><span class="yr">2006–2009</span><span class="role">Bachelor of Business, Banking and Finance, Second Upper Honours<span class="org">Nanyang Technological University</span></span></li>
-    </ol>
   </div>
 </section>
 
 <section class="s tight" id="about">
   <div class="wrap about">
-    <div class="portrait-frame"><img class="portrait-img" src="portrait.jpg" width="800" height="800" loading="lazy" alt="Daniel Quek grinning in a red Singapore jersey and parachute harness, with Marina Bay Sands and National Day fireworks behind him."></div>
+    <div class="portrait-frame"><img class="portrait-img" src="daniel-quek-portrait.jpg" width="1100" height="1100" loading="lazy" alt="Daniel Quek, with curly shoulder-length hair and a clip-on mic, talking with his hands against a pale blue background. He is wearing a green camo T-shirt with a deer and the words Whitetail Legend."></div>
     <div>
-      <h2 class="lead" style="margin-bottom:28px">Finance first. Then apps.</h2>
-      <p>I started in banking, then spent a year building iPhone apps.</p>
-      <p>What I share now is on the side: Tableau vizzes, small tools, and AI video. I care most about making technical things plain.</p>
-      <div class="chips" style="margin-bottom:22px" aria-label="Credentials">
-        <span class="chip">Tableau Data Scientist</span><span class="chip">Tableau Analyst</span><span class="chip">AI Singapore, Foundations in AI</span>
+      <h2 class="lead" style="margin-bottom:28px">Finance first. Now AI.</h2>
+      <p>I started in banking, built iPhone apps, and now build with AI every day.</p>
+      <p>I ship small AI products like Eat Simi and Play Simi, make AI videos, and share what I learn at Codex community events. I like making tech easy to understand.</p>
+      <div class="chips" style="margin-bottom:22px" aria-label="About me">
+        <span class="chip">Builds with AI daily</span><span class="chip">AI products: Eat Simi, Play Simi</span><span class="chip">AI video maker</span><span class="chip">Codex community</span><span class="chip">Gamer</span><span class="chip">Husband and dad</span>
       </div>
-      <p class="name">Husband and dad.</p>
     </div>
   </div>
 </section>
@@ -343,28 +279,27 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
 <section class="s tight" id="builds">
   <div class="wrap">
     <h2 class="lead">Things I've built.</h2>
-    <p class="sub">Side projects where I try out new tools, from 3D engines to LLMs.</p>
+    <p class="sub">Things I made for fun while trying out new tech.</p>
     <div class="builds">
       <article class="build game-feature" id="playsimi" aria-labelledby="playsimi-title">
         <figure class="game-media">
-          <video controls playsinline preload="none" poster="playsimi-poster.jpg" width="1280" height="720" aria-label="Play Simi promo — 30 seconds">
-            <source src="playsimi-promo.mp4" type="video/mp4">
-            <a href="playsimi-promo.mp4">Watch the Play Simi promo</a>.
+          <video id="playsimi-video" data-autoplay-in-view controls muted loop playsinline preload="metadata" poster="playsimi-poster-60.jpg" width="1280" height="720" aria-label="Play Simi story — 1 minute, starts muted">
+            <source src="playsimi-promo-60.mp4" type="video/mp4">
+            <a href="playsimi-promo-60.mp4">Watch the Play Simi story</a>.
           </video>
-          <figcaption>Watch the 30-second promo · Footage from the game</figcaption>
+          <figcaption>The 1-minute story behind the game. Tap the speaker for sound.</figcaption>
         </figure>
         <div class="body">
-          <span class="eyebrow">Browser game · Three.js · Cloudflare</span>
+          <span class="eyebrow">Online game</span>
           <h3 id="playsimi-title">Play Simi</h3>
-          <p>A little Singapore-inspired 3D neighbourhood. Meet you downstairs for one more round.</p>
+          <p>A Singapore-style neighbourhood to explore and play in with friends.</p>
           <ul class="game-highlights">
-            <li>Play arcade games, race in Coast Rush, or dance at Open Stage.</li>
-            <li>Explore the dragon playground, go fishing, and shoot hoops.</li>
-            <li>Make your avatar your own with outfits, pets, and magic.</li>
-            <li>Invite friends, take on challenges, and climb the rankings.</li>
+            <li>Arcade games, racing, dancing, fishing and hoops.</li>
+            <li>Dress up your character and bring a pet.</li>
+            <li>Invite friends and climb the rankings.</li>
           </ul>
           <div class="acts"><a class="btn" href="https://playsimi.danielquek.com">Play Simi <span aria-hidden="true">↗</span></a></div>
-          <p class="note">Play in your browser · Phone or desktop · Ages 13+</p>
+          <p class="note">Nothing to download · Phone or computer · Ages 13+</p>
         </div>
       </article>
       <article class="build game-feature" id="eatsimi" aria-labelledby="eatsimi-title">
@@ -373,77 +308,90 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
             <source src="eatsimi-promo.mp4" type="video/mp4">
             <a href="eatsimi-promo.mp4">Watch the Eat Simi promo</a>.
           </video>
-          <figcaption>Watch the 30-second promo · Animated in Python, voice by ElevenLabs</figcaption>
+          <figcaption>Watch the 30-second promo</figcaption>
         </figure>
         <div class="body">
-          <span class="eyebrow">AI agent · iOS app · Cloudflare</span>
+          <span class="eyebrow">Food · Website and iPhone app</span>
           <h3 id="eatsimi-title">Eat Simi</h3>
-          <p>A dining companion that reads a restaurant's menu, picks a meal that fits your table, and fills the restaurant's own cart for you.</p>
+          <p>Scan a menu. Get dishes picked for you.</p>
           <ul class="game-highlights">
-            <li>Scan any table QR; the restaurant's own ordering page opens inside the app.</li>
-            <li>Picks for your party and budget, and leaves out dishes that match a saved allergy.</li>
-            <li>Taps Add only when it's sure, then checks every line of the cart.</li>
-            <li>Never pays, and nothing is sent until you confirm.</li>
+            <li>Picks for your group and budget, and skips dishes that mention your allergies.</li>
+            <li>In the app, it adds your picks to the restaurant's own order for you.</li>
+            <li>It never pays, and nothing is ordered until you say yes.</li>
           </ul>
           <div class="acts"><a class="btn" href="https://eatsimi.danielquek.com">Try Eat Simi <span aria-hidden="true">↗</span></a></div>
-          <p class="note">The website suggests dishes from any menu · iOS app coming soon</p>
+          <p class="note">Try the website now · iPhone app coming soon</p>
+        </div>
+      </article>
+      <article class="build game-feature" id="hazegowhere" aria-labelledby="hazegowhere-title">
+        <figure class="game-media">
+          <video data-autoplay-in-view controls muted loop playsinline preload="metadata" poster="haze-gowhere-poster.jpg" width="1280" height="720" aria-label="Haze GoWhere demo — 44 seconds, starts muted">
+            <source src="haze-gowhere-demo.mp4" type="video/mp4">
+            <a href="haze-gowhere-demo.mp4">Watch the Haze GoWhere demo</a>.
+          </video>
+          <figcaption>The 44-second demo. Tap the speaker for sound.</figcaption>
+        </figure>
+        <div class="body">
+          <span class="eyebrow">Haze helper · Website</span>
+          <h3 id="hazegowhere-title">Haze GoWhere</h3>
+          <p>Tell it where you're going in Singapore, and it finds the route that keeps you indoors the longest, using trains, underground stations and covered walkways, based on live NEA haze readings.</p>
+          <ul class="game-highlights">
+            <li>Shows which parts of the trip are indoors, sheltered or out in the open.</li>
+            <li>The worse the haze, the harder it avoids walking outside.</li>
+            <li>When the haze is really bad, it also suggests a taxi.</li>
+          </ul>
+          <div class="acts"><a class="btn" href="https://haze.danielquek.com">Try Haze GoWhere <span aria-hidden="true">↗</span></a><a href="https://x.com/daniu_101/status/2111642867915444388">See it on X <span aria-hidden="true">↗</span></a><a href="https://youtu.be/ZWll4zdr1OA">Watch on YouTube <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+<article class="build game-feature" id="facearcade" aria-labelledby="facearcade-title">
+        <figure class="game-media">
+          <video data-autoplay-in-view controls muted loop playsinline preload="metadata" poster="face-arcade-poster.jpg" width="1280" height="720" aria-label="Face Arcade promo — 30 seconds, starts muted">
+            <source src="face-arcade-promo.mp4" type="video/mp4">
+            <a href="face-arcade-promo.mp4">Watch the Face Arcade promo</a>.
+          </video>
+          <figcaption>Watch the 30-second promo. Tap the speaker for sound.</figcaption>
+        </figure>
+        <div class="body">
+          <span class="eyebrow">Webcam games · Website</span>
+          <h3 id="facearcade-title">Face Arcade</h3>
+          <p>Three browser games you play with your face. Your head and mouth are the controller.</p>
+          <ul class="game-highlights">
+            <li>A space shooter, a platformer and a two-player pong game.</li>
+            <li>Steer with your head. Open your mouth to fire or jump.</li>
+            <li>Face tracking runs in your browser, so no video leaves your device.</li>
+          </ul>
+          <div class="acts"><a class="btn" href="https://face-arcade.danielquek.com">Try Face Arcade <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="build">
+        <div class="body">
+          <span class="eyebrow">Personal tool · I use it every day</span>
+          <h3>Second Brain</h3>
+          <p>My digital notebook. AI files what I read into tidy, linked notes, so I don't forget what I learn.</p>
+          <ol class="flow" aria-label="How it works">
+            <li>What I read</li><li class="arrow" aria-hidden="true">→</li><li>Tidy notes</li><li class="arrow" aria-hidden="true">→</li><li>Answers</li>
+          </ol>
+          <dl class="case-facts">
+            <div><dt>What it does</dt><dd>Each day it collects a news roundup and turns what I read into notes.</dd></div>
+            <div><dt>How I check it</dt><dd>I test it with questions to make sure it finds the right note, and says so when it doesn't know.</dd></div>
+          </dl>
+          <p class="note">Based on an idea from Andrej Karpathy. The code is private.</p>
         </div>
       </article>
       <article class="build" id="decision-trails" aria-labelledby="decision-trails-title">
         <div class="body">
-          <span class="eyebrow">Applied AI · TypeSafe Jev · Cloudflare</span>
+          <span class="eyebrow">AI for statistics · Websites</span>
           <h3 id="decision-trails-title">SSIC &amp; SSOC Decision Trails</h3>
-          <p>Two sister apps that code text to Singapore's national classifications. Describe a business and get its SSIC 2025 industry code, or paste a job description and get its SSOC 2024 occupation code. Every step of the decision plays out as a pixel-art crowd, with each probability listed.</p>
+          <p>Two sister apps that find Singapore's official codes for you. Describe a business to get its SSIC industry code, or paste a job ad to get its SSOC occupation code. You watch the AI choose, step by step, as a pixel-art crowd.</p>
           <ol class="flow" aria-label="How it works">
-            <li>text</li><li class="arrow" aria-hidden="true">→</li><li>5 levels</li><li class="arrow" aria-hidden="true">→</li><li>finals</li><li class="arrow" aria-hidden="true">→</li><li>5-digit code</li>
+            <li>Your text</li><li class="arrow" aria-hidden="true">→</li><li>Five rounds</li><li class="arrow" aria-hidden="true">→</li><li>Final five</li><li class="arrow" aria-hidden="true">→</li><li>Code</li>
           </ol>
           <dl class="case-facts">
-            <div><dt>How it decides</dt><dd>A beam search walks the SingStat tree one level at a time, using SingStat's own definitions and exclusions. The five best codes then meet in a final round. Six model calls, about 1.4 seconds.</dd></div>
-            <div><dt>How I check it</dt><dd>I test against the codes employers chose on MyCareersFuture. SSIC matched 10 of 12 companies. SSOC matched 4 of 10 job postings, and most of the misses were ambiguous postings, not clear errors.</dd></div>
+            <div><dt>How it decides</dt><dd>It narrows the official list one level at a time using SingStat's own definitions, then picks from the best five. It shows how sure it is at every step.</dd></div>
+            <div><dt>How I check it</dt><dd>I compare its answers with the codes on real MyCareersFuture listings. Industry codes matched 10 of 12 companies. Job codes matched 4 of 10 ads, and most misses were ads that could fit more than one code.</dd></div>
           </dl>
-          <div class="acts"><a class="btn" href="https://ssic.danielquek.com">Try SSIC <span aria-hidden="true">↗</span></a> <a class="btn" href="https://ssoc.danielquek.com">Try SSOC <span aria-hidden="true">↗</span></a></div>
+          <div class="acts"><a class="btn" href="https://ssic.danielquek.com">Try SSIC <span aria-hidden="true">↗</span></a><a class="btn" href="https://ssoc.danielquek.com">Try SSOC <span aria-hidden="true">↗</span></a></div>
           <p class="note">Open source: <a href="https://github.com/blurboy1985/ssic-decision-trail">SSIC code</a> · <a href="https://github.com/blurboy1985/ssoc-decision-trail">SSOC code</a></p>
-        </div>
-      </article>
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Python · LLMs · In daily use</span>
-          <h3>Second Brain</h3>
-          <p>My personal knowledge base. The AI reads each new source once and files it into linked wiki pages, so what I learn adds up instead of being forgotten.</p>
-          <ol class="flow" aria-label="How it works">
-            <li>raw/ sources</li><li class="arrow" aria-hidden="true">→</li><li>wiki/ pages</li><li class="arrow" aria-hidden="true">→</li><li>answers</li>
-          </ol>
-          <dl class="case-facts">
-            <div><dt>What I built</dt><dd>Scheduled jobs that pull in a daily news digest and compile sources into linked wiki pages. I use the knowledge base daily.</dd></div>
-            <div><dt>How I check it</dt><dd>A test suite asks known questions to check that the right page comes back, and off-topic questions to check that it admits what it doesn't know.</dd></div>
-          </dl>
-          <p class="note">Built on Andrej Karpathy's LLM knowledge-base method. The repository is private.</p>
-        </div>
-      </article>
-    </div>
-    <div class="minis">
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Tableau · 2021</span>
-          <h3>HDB Resale Flat Calculator</h3>
-          <p>A team entry for the Data Arcade Tournament, featured in the Tableau gallery. More than 1,200 views on Tableau Public.</p>
-          <div class="acts"><a href="https://public.tableau.com/app/profile/daniel.quek/viz/dat2021_cloud_peanut_friends_v4/Final">Open the viz</a></div>
-        </div>
-      </article>
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">three.js · Open source</span>
-          <h3>Rubik's Cube solver</h3>
-          <p>An interactive 3D cube with a two-phase Kociemba solver, running entirely in the browser.</p>
-          <div class="acts"><a href="https://github.com/blurboy1985/rubiks-cube-solver">See the code</a></div>
-        </div>
-      </article>
-      <article class="build">
-        <div class="body">
-          <span class="eyebrow">Python · React · Open source</span>
-          <h3>Paper-trading simulator</h3>
-          <p>A multi-signal US-stock simulator with a look-ahead-safe backtester and hard risk caps, for learning quant methods safely.</p>
-          <div class="acts"><a href="https://github.com/blurboy1985/stock-trading">See the code</a></div>
         </div>
       </article>
     </div>
@@ -452,76 +400,54 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
 
 <section class="s tight" id="ai-video">
   <div class="wrap">
-    <h2 class="lead">AI video works.</h2>
+    <h2 class="lead">Videos made with AI.</h2>
     <article class="video-work">
       <div>
-        <span class="eyebrow">AI-assisted video · Music</span>
+        <span class="eyebrow">Music video</span>
         <h3>F4 reunion</h3>
-        <p>My latest AI video work: an imagined F4 reunion music video.</p>
-        <p>2 min 50 sec · Vertical video</p>
+        <p>A make-believe F4 reunion music video, made with AI.</p>
+        <p>2 min 50 sec · Made for phones</p>
       </div>
       <video controls playsinline preload="none" poster="f4-reunion-poster.jpg" width="720" height="1280" aria-label="F4 reunion — AI music video">
         <source src="f4-reunion.mp4" type="video/mp4">
         <a href="f4-reunion.mp4">Watch the F4 reunion video</a>.
       </video>
     </article>
+    <div class="shorts-block">
+      <div class="shorts-head">
+        <div>
+          <span class="eyebrow">YouTube Shorts · Food</span>
+          <h3>Ren &amp; Hana cook</h3>
+          <p>Cosy cooking clips with two anime friends, made with AI. Turn the sound up.</p>
+        </div>
+        <a class="see-all" href="https://www.youtube.com/playlist?list=PLfirCj-lAHvA">See all on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+      <ul class="shorts" aria-label="Ren and Hana cooking Shorts">
+        <li><a href="https://www.youtube.com/shorts/ZPwvMpqwDXI"><img src="https://i.ytimg.com/vi/ZPwvMpqwDXI/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ZPwvMpqwDXI/hqdefault.jpg'"><span>Korean butter rice cakes</span></a></li>
+        <li><a href="https://www.youtube.com/shorts/PJz4loZjysY"><img src="https://i.ytimg.com/vi/PJz4loZjysY/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PJz4loZjysY/hqdefault.jpg'"><span>Dubai chewy cookies</span></a></li>
+        <li><a href="https://www.youtube.com/shorts/O2ggHjlMVno"><img src="https://i.ytimg.com/vi/O2ggHjlMVno/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/O2ggHjlMVno/hqdefault.jpg'"><span>Matcha tiramisu balls</span></a></li>
+        <li><a href="https://www.youtube.com/shorts/ux7D4TKz2Rk"><img src="https://i.ytimg.com/vi/ux7D4TKz2Rk/oar2.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ux7D4TKz2Rk/hqdefault.jpg'"><span>Dubai pistachio chocolate bar</span></a></li>
+      </ul>
+    </div>
+    <article class="live-block">
+      <div>
+        <span class="eyebrow">Codex Live</span>
+        <h3>Codex DevDay Exchange, Singapore</h3>
+        <p>A recorded Codex community meetup in Singapore: a recap of OpenAI's DevDay, then demos from local builders.</p>
+        <p class="live-meta">Livestream · 10 Oct 2026 · 1 hr 3 min</p>
+        <a class="see-all" href="https://www.youtube.com/watch?v=OF8mtbYZsNo">Watch on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="live-thumb" href="https://www.youtube.com/watch?v=OF8mtbYZsNo" aria-label="Watch Codex DevDay Exchange, Singapore on YouTube"><img src="https://i.ytimg.com/vi/OF8mtbYZsNo/maxresdefault.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OF8mtbYZsNo/hqdefault.jpg'"></a>
+    </article>
+    <p class="channel-link"><a href="https://www.youtube.com/@dailywithdaniel">More on my YouTube channel <span aria-hidden="true">↗</span></a></p>
   </div>
 </section>
 
-<section class="s tight" id="community">
-  <div class="wrap">
-    <h2 class="lead">In the community.</h2>
-    <div class="beyond">
-      <div>
-        <div class="big-num">16</div>
-        <h3>Tableau Public vizzes</h3>
-        <p>Community challenges like #MakeoverMonday and #WorkoutWednesday, from music sales to world happiness.</p>
-        <a href="https://public.tableau.com/app/profile/daniel.quek/vizzes">See the vizzes</a>
-      </div>
-      <div>
-        <div class="big-num">2×</div>
-        <h3>Data Arcade Tournament</h3>
-        <p>A visual analytics competition. Entries in 2020 and 2021.</p>
-        <a href="https://www.tableau.com/tableau-x-data-arcade-tournament-2021">See the 2021 gallery</a>
-      </div>
-      <div>
-        <div class="big-num">4</div>
-        <h3>Articles on Medium</h3>
-        <p>Written for Analytics Vidhya in 2020: presenting analytics findings, churn modelling, and Advent of Code.</p>
-        <a href="https://danielquek85.medium.com/">Read the articles</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="s tight" id="beyond">
-  <div class="wrap">
-    <h2 class="lead">After hours.</h2>
-    <div class="beyond">
-      <div>
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m10 9.5 5 2.5-5 2.5Z"/></svg>
-        <h3>Daily with Daniel</h3>
-        <p>Everyday life in Singapore, unfiltered: family weekends, the World Cup, and what $50 a month of AI can and can't do.</p>
-        <a href="https://www.youtube.com/@dailywithdaniel">Watch the channel</a>
-      </div>
-      <div>
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 14 3.5-4 3 2.5L19 7"/></svg>
-        <h3>Maths learning games</h3>
-        <p>Browser games that help Primary 5 and 6 pupils practise topics like rate, plus a growing PSLE practice bank that starts with P5 fractions.</p>
-      </div>
-      <div>
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></svg>
-        <h3>Sports photography</h3>
-        <p>Volunteer sports photography since 2013.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="s contact" id="contact">
   <div class="wrap">
-    <h2 class="lead">Let's compare notes.</h2>
-    <p class="sub">Working on AI agents, Tableau, or side projects? I'd like to hear from you.</p>
+    <h2 class="lead">Say hello.</h2>
+    <p class="sub">Have a question or an idea? I'd love to hear from you.</p>
     <p style="margin-top:36px"><a class="btn" href="https://www.linkedin.com/in/daniel-quek-34553813/">Connect on LinkedIn</a></p>
     <div class="links">
       <a href="https://github.com/blurboy1985">GitHub</a>
@@ -553,55 +479,25 @@ modeBtn.addEventListener("click", () => {
   window.dispatchEvent(new Event("dq-mode"));
 });
 
-// ----- Ask my agent (scripted) -----
-const answers = {
-  ai: ["Where do you use AI?", "On the F4 reunion video, in a second brain that files sources into a wiki, and through the AI Singapore Foundations in AI course."],
-  auto: ["What do you automate?", "The second brain. A scheduled job pulls a daily digest, and other jobs compile those sources into linked wiki pages."],
-  path: ["How did you get into data?", "Banking first, then a year building iPhone apps. Side projects came after that: vizzes, small tools, and video."],
-  fun: ["What do you build for fun?", "A second brain, AI apps that assign SSIC and SSOC codes, a Rubik's cube solver, the F4 reunion video, and a YouTube channel about everyday life in Singapore."],
-  real: ["Can I talk to the real Daniel?", "Yes. I'd be glad to compare notes on applied AI, Tableau, or side projects."]
-};
-const log = document.getElementById("log"), promptBtns = [...document.querySelectorAll("#prompts button")];
-let busy = false;
-function addMsg(cls, html){ const d = document.createElement("div"); d.className = "msg " + cls; d.innerHTML = html; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
-promptBtns.forEach(btn => btn.addEventListener("click", () => {
-  if (busy) return;
-  const [q, a] = answers[btn.dataset.q];
-  busy = true; promptBtns.forEach(b => b.disabled = true);
-  addMsg("q", "");
-  log.lastChild.textContent = q;
-  const bubble = addMsg("a", '<span class="who">DQ agent</span><span class="dots" aria-label="Thinking"><span></span><span></span><span></span></span>');
-  const finish = () => {
-    if (btn.dataset.q === "real") {
-      const link = document.createElement("a");
-      link.href = "https://www.linkedin.com/in/daniel-quek-34553813/";
-      link.textContent = "Connect with me on LinkedIn";
-      bubble.append(document.createElement("br"), link);
-      log.scrollTop = log.scrollHeight;
-    }
-    busy = false; promptBtns.forEach(b => b.disabled = b.dataset.used === "1");
-  };
-  btn.dataset.used = "1";
-  setTimeout(() => {
-    bubble.innerHTML = '<span class="who">DQ agent</span><span class="txt"></span>';
-    const txt = bubble.querySelector(".txt");
-    if (reduced){ txt.textContent = a; log.scrollTop = log.scrollHeight; finish(); return; }
-    const words = a.split(" "); let n = 0;
-    const caret = document.createElement("span"); caret.className = "caret"; bubble.appendChild(caret);
-    const iv = setInterval(() => {
-      n++; txt.textContent = words.slice(0, n).join(" "); log.scrollTop = log.scrollHeight;
-      if (n >= words.length){ clearInterval(iv); caret.remove(); finish(); }
-    }, 38);
-  }, reduced ? 0 : 650);
-}));
+// ----- Feature videos: play muted while on screen -----
+document.querySelectorAll("video[data-autoplay-in-view]").forEach(video => {
+  if (!("IntersectionObserver" in window)) return;
+  const still = matchMedia("(prefers-reduced-motion: reduce)");
+  let userPaused = false;
+  video.muted = true;
+  video.addEventListener("pause", () => { if (!video.dataset.autoPause) userPaused = true; delete video.dataset.autoPause; });
+  video.addEventListener("play", () => { userPaused = false; });
+  new IntersectionObserver(entries => {
+    const onScreen = entries[0].isIntersecting;
+    if (onScreen && !userPaused && !still.matches && video.paused) video.play().catch(() => {});
+    else if (!onScreen && !video.paused){ video.dataset.autoPause = "1"; video.pause(); }
+  }, {threshold:.5}).observe(video);
+});
 
-// ----- Journey, About and Builds: progressive scroll and pointer motion -----
+// ----- About and Builds: progressive scroll and pointer motion -----
 function initSectionMotion(){
   const preference = matchMedia("(prefers-reduced-motion: reduce)");
-  const sections = [...document.querySelectorAll("#journey, #about, #builds")];
-  const route = document.querySelector(".journey");
-  const milestones = [...route.children];
-  const portrait = document.querySelector(".portrait-frame");
+  const sections = [...document.querySelectorAll("#about, #builds")];
   const builds = [...document.querySelectorAll("#builds .build")];
   const flow = document.querySelector("#builds .flow");
   const flowSteps = [...flow.querySelectorAll("li:not(.arrow)")];
@@ -611,15 +507,6 @@ function initSectionMotion(){
   function update(){
     pendingFrame = 0;
     if (preference.matches) return;
-    const readingLine = innerHeight * .72;
-    const bounds = route.getBoundingClientRect();
-    route.style.setProperty("--route-progress", limit((readingLine - bounds.top - 32) / Math.max(1, bounds.height - 64)));
-    milestones.forEach(item => item.classList.toggle("is-reached", item.getBoundingClientRect().top + 32 < readingLine));
-    const aboutBounds = portrait.getBoundingClientRect();
-    if (aboutBounds.bottom > 0 && aboutBounds.top < innerHeight){
-      const progress = limit((innerHeight - aboutBounds.top) / (innerHeight + aboutBounds.height));
-      portrait.style.setProperty("--portrait-shift", `${(progress - .5) * 24}px`);
-    }
     const shot = document.querySelector("#builds .shot");
     if (shot) {
       const shotBounds = shot.getBoundingClientRect();
@@ -644,8 +531,6 @@ function initSectionMotion(){
     root.classList.toggle("motion-ready", !preference.matches);
     if (preference.matches){
       animations.forEach(animation => animation.cancel()); animations.clear();
-      route.style.removeProperty("--route-progress");
-      milestones.forEach(item => item.classList.add("is-reached"));
     } else schedule();
     syncFlow();
   }
@@ -658,9 +543,8 @@ function initSectionMotion(){
         reveal.unobserve(element);
         element.classList.add("has-entered");
         if (preference.matches) return;
-        const isMilestone = element.parentElement === route;
         const animation = element.animate([
-          {opacity:0, transform:isMilestone ? "translateX(24px)" : "translateY(36px) scale(.98)"},
+          {opacity:0, transform:"translateY(36px) scale(.98)"},
           {opacity:1, transform:"translate(0) scale(1)"}
         ], {duration:760, delay:Number(element.dataset.motionDelay || 0), easing:"cubic-bezier(.2,.7,.2,1)", fill:"backwards"});
         animations.add(animation);
@@ -668,7 +552,7 @@ function initSectionMotion(){
       });
     }, {threshold:.12});
     sections.forEach(section => {
-      const targets = section.querySelectorAll(".lead, .sub, .journey li, .portrait-frame, .about > div:last-child > p, .about .chips, .build");
+      const targets = section.querySelectorAll(".lead, .sub, .portrait-frame, .about > div:last-child > p, .about .chips, .build");
       targets.forEach((element, index) => {
         element.dataset.motionDelay = String((index % 3) * 80);
         reveal.observe(element);
@@ -754,7 +638,7 @@ const heightF = (gx, gz) => clamp(.6 * gauss(gx, gz, 7, 8, 4.5) + .55 * gauss(gx
 const lineCols = ["#D42E12", "#009645", "#12A0A0", "#C07A35", "#6F7FE0", "#2E5BFF"].map(col);
 const pts = [new THREE.Vector3(-8, 0, 2.2), new THREE.Vector3(-5, 0, -1.4), new THREE.Vector3(-2, 0, 1.8), new THREE.Vector3(1, 0, -1.8), new THREE.Vector3(3.8, 0, 1.6), new THREE.Vector3(6, 0, -1.2), new THREE.Vector3(8.3, 0, 1.2)];
 const curve = new THREE.CatmullRomCurve3(pts, false, "catmullrom", .5);
-const stationNames = ["NTU", "Standard Chartered", "iOS apps", "UOB", "Second Brain", "Vizzes", "F4"];
+const stationNames = ["NTU", "Standard Chartered", "iPhone apps", "UOB", "Second Brain", "Charts", "F4"];
 const stationT = pts.map((p, i) => i / (pts.length - 1));
 
 // neural-net geometry: four layers of nodes, each a sunflower disc
@@ -810,7 +694,7 @@ const links = new THREE.LineSegments(linkGeo, linkMat); group.add(links);
 
 const stationPos = pts.map(p => new THREE.Vector3(p.x, 1.9, p.z));
 const layerPos = [new THREE.Vector3(5.6, -1.6, 1.9), new THREE.Vector3(5.6, .15, 1.9), new THREE.Vector3(5.6, 2.3, 1.9)];
-const layerNames = ["Sources", "Wiki", "Answers"];
+const layerNames = ["What I read", "Notes", "Answers"];
 const netPos = [new THREE.Vector3(-6.9, 3.0, 0), new THREE.Vector3(6.9, 2.5, 0)];
 const netNames = ["Data in", "Answers out"];
 

@@ -2,14 +2,16 @@
 
 Live at **[danielquek.com](https://danielquek.com)**.
 
-A personal portfolio about data platforms, applied AI, automation and side projects. The site uses a three.js opening, JavaScript scroll animations, a light theme with a dark-mode toggle, and a clearly labelled scripted chat. Views expressed are personal.
+A personal portfolio about data platforms, applied AI, automation and side projects. The site uses a three.js opening, JavaScript scroll animations and a light theme with a dark-mode toggle, plus a video section with the F4 reunion video and Ren & Hana YouTube Shorts. Views expressed are personal.
 
 ## Source
 
 - `index.html` — page content, inline styles and JavaScript; edit this file.
 - `assets/` — portrait and project images.
 - `assets/f4-reunion.mp4` — mobile-friendly 720p copy of the F4 reunion AI music video, with its poster image alongside it. The original editing export stays outside the repository.
-- `assets/playsimi-promo.mp4` — the 30-second Play Simi promo, with `playsimi-poster.jpg` alongside it.
+- `assets/playsimi-promo-60.mp4` — the 1-minute Play Simi story (720p, about 6 MB), with `playsimi-poster-60.jpg` alongside it. It plays muted while on screen; the original 1080p render lives in the `darecade` repository under `play-simi-promo/`.
+- `assets/haze-gowhere-demo.mp4` — the 44-second Haze GoWhere demo (720p, about 7 MB), with `haze-gowhere-poster.jpg` alongside it. It plays muted while on screen.
+- `assets/face-arcade-promo.mp4` — the 30-second Face Arcade promo (720p, about 1.5 MB), with `face-arcade-poster.jpg` alongside it. It plays muted while on screen.
 - `build_site.py` — creates the standalone page and copies images into `site/dist/`.
 
 The source HTML is a fragment. Run the build to add the full document wrapper, share metadata and favicon before hosting. The build copies JPG and MP4 assets next to the page. The generated page loads three.js and fonts from external services. Video playback uses native controls, supports inline mobile playback, and starts only when requested.
@@ -36,4 +38,4 @@ Deployments currently use Direct Upload; pushing to GitHub alone does not publis
 
 ## Motion and accessibility
 
-Journey includes a scroll-progress timeline, About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The chat uses pre-written answers and does not call an AI service.
+About uses portrait and text reveals, and Builds includes card reveals and pointer movement. These effects respect reduced-motion preferences. The Shorts cards are plain links with lazy-loaded YouTube thumbnails (no embedded players); "See all on YouTube" opens the ASMR Food playlist, so new uploads show there without code changes.
