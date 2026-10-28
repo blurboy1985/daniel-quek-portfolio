@@ -149,6 +149,7 @@ section.s.tight{padding-top:0}
 .game-feature{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center}
 .game-media{margin:clamp(16px,2.4vw,30px);min-width:0}
 .game-media video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:18px;background:#101820}
+.game-media img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;background:#101820}
 .game-media figcaption{margin-top:10px;font-size:13px;color:var(--muted)}
 .game-highlights{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:6px}
 .game-feature .acts{padding-top:12px}
@@ -361,6 +362,23 @@ footer{background:var(--tile);color:var(--muted);font-size:13px;text-align:cente
             <li>Face tracking runs in your browser, so no video leaves your device.</li>
           </ul>
           <div class="acts"><a class="btn" href="https://face-arcade.danielquek.com">Try Face Arcade <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="build game-feature" id="grandmarecipe" aria-labelledby="grandmarecipe-title">
+        <figure class="game-media">
+          <a href="https://youtu.be/jcLpzuQXhXM"><img src="grandma-recipe-thumb.jpg" width="1280" height="720" loading="lazy" alt="Grandma's Recipe Story demo video on YouTube"></a>
+          <figcaption>Tap to watch the demo on YouTube.</figcaption>
+        </figure>
+        <div class="body">
+          <span class="eyebrow">Family recipes · Website</span>
+          <h3 id="grandmarecipe-title">Grandma's Recipe Story</h3>
+          <p>Record Grandma talking through one dish, and it turns her words into a recipe card you can keep, with her voice saved alongside it.</p>
+          <ul class="game-highlights">
+            <li>Just press record. No forms to fill in first.</li>
+            <li>The recipe sticks to what she actually said, and flags the parts it isn't sure about.</li>
+            <li>Your recordings stay private on your device.</li>
+          </ul>
+          <div class="acts"><a class="btn" href="https://grandma-recipe.danielquek.com">Try Grandma's Recipe Story <span aria-hidden="true">↗</span></a><a href="https://youtu.be/jcLpzuQXhXM">Watch on YouTube <span aria-hidden="true">↗</span></a><a href="https://github.com/blurboy1985/grandmas-recipe-story">See the code <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
       <article class="build">
