@@ -12,6 +12,7 @@ A personal portfolio about data platforms, applied AI, automation and side proje
 - `assets/playsimi-promo-60.mp4` — the 1-minute Play Simi story (720p, about 6 MB), with `playsimi-poster-60.jpg` alongside it. It plays muted while on screen; the original 1080p render lives in the `darecade` repository under `play-simi-promo/`.
 - `assets/haze-gowhere-demo.mp4` — the 44-second Haze GoWhere demo (720p, about 7 MB), with `haze-gowhere-poster.jpg` alongside it. It plays muted while on screen.
 - `assets/face-arcade-promo.mp4` — the 30-second Face Arcade promo (720p, about 1.5 MB), with `face-arcade-poster.jpg` alongside it. It plays muted while on screen.
+- `assets/use-case-atlas-promo.mp4` — the 42-second Use Case Atlas anime promo (720p, about 4.6 MB, voice and music made with ElevenLabs), with `use-case-atlas-poster.jpg` alongside it. It plays muted while on screen.
 - `build_site.py` — creates the standalone page and copies images into `site/dist/`.
 
 The source HTML is a fragment. Run the build to add the full document wrapper, share metadata and favicon before hosting. The build copies JPG and MP4 assets next to the page. The generated page loads three.js and fonts from external services. Video playback uses native controls, supports inline mobile playback, and starts only when requested.
